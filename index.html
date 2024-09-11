@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation Issues</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e0f7fa;
+            
+            position: relative;
+        }
+        
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        @keyframes bubbleAnimation {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        .bubble1 { width: 100px; height: 100px; animation: bubbleAnimation 15s linear infinite; }
+        .bubble2 { width: 150px; height: 150px; animation: bubbleAnimation 20s linear infinite; }
+        .bubble3 { width: 80px; height: 80px; animation: bubbleAnimation 18s linear infinite; }
+        .bubble4 { width: 120px; height: 120px; animation: bubbleAnimation 22s linear infinite; }
+
+        .headline {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 36px;
+            color: #00796b;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sub-topic {
+            text-align: center;
+            font-size: 24px;
+            color: #004d40;
+            margin-top: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .points {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px auto;
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .point {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            text-align: center;
+            font-size: 18px;
+            color: #00796b;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .point:hover {
+            transform: scale(1.1);
+            background-color: #b2dfdb;
+        }
+
+        .point:nth-child(1) { animation-delay: 0s; }
+        .point:nth-child(2) { animation-delay: 0.1s; }
+        .point:nth-child(3) { animation-delay: 0.2s; }
+        .point:nth-child(4) { animation-delay: 0.3s; }
+        .point:nth-child(5) { animation-delay: 0.4s; }
+        .point:nth-child(6) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <div class="bubble bubble1" style="top: 20%; left: 10%;"></div>
+    <div class="bubble bubble2" style="top: 30%; left: 50%;"></div>
+    <div class="bubble bubble3" style="top: 70%; left: 20%;"></div>
+    <div class="bubble bubble4" style="top: 50%; left: 70%;"></div>
+    
+    <div class="headline"><h1>Lack of Participation</h1></div>
+    <div class="sub-topic">Identified major Problems</div>
+
+    <div class="points">
+        <div class="point">Missed Learning Opportunity</div>
+        <div class="point">Lack of Information</div>
+        <div class="point">Weakened Problem Solving</div>
+        <div class="point">Trust Deficit</div>
+        <div class="point">Accessibility Issues</div>
+        <div class="point">Fear of Result</div>
+    </div>
+</body>
+</html>
